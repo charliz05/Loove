@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="loove.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="-20.66deg 77.12deg 5.269m" field-of-view="30deg" auto-rotate id="gear">
+      
+	<button class="Hotspot" slot="hotspot1" data-position="0.4590704510482886m 0.07982015181931001m 0.8985478700031575m" data-normal="0.10286304012064698m 0.9226588254900003m 0.3716448394940412m" data-visibility-attribute="visible" onMouseOver="addhotspot1()" onMouseOut="removehotspot1()">
+          <div class="HotspotAnnotation" id="hotspot1"
+style="visibility:hidden;">Flush</div>
+      </button>
+
+	<button class="Hotspot" slot="hotspot2" data-position="0.5513950937839533m 0.07969902302965115m 0.01882188429399176m" data-normal="-0.025049798963174084m -0.9996767548105469m -0.004346661173666007m" data-visibility-attribute="visible" onMouseOver="addhotspot2()" onMouseOut="removehotspot2()">
+          <div class="HotspotAnnotation" id="hotspot2"
+style="visibility:hidden;">Material Tray</div>
+      </button>
+
+	<button class="Hotspot" slot="hotspot3" data-position="-0.035051162684758844m 0.9971569031659682m -0.019520441699639693m" data-normal="-0.42586703681983396m -0.08920712280041995m 0.9003773410031848m" data-visibility-attribute="visible" onMouseOver="addhotspot3()" onMouseOut="removehotspot3()">
+          <div class="HotspotAnnotation" id="hotspot3"
+style="visibility:hidden;">Main Body</div>
+      </button>
+
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+
+
+<div style="position:absolute; bottom:0px; right:0px">
+  <button onClick="setOrbit('-42.62deg 92.05deg 0.1755m’)”>View 1
+  </button>
+  </div>
+
+<div style="position:absolute; bottom:0px; right:0px">
+	<button onClick="setOrbit('-29.1deg 81.44deg 5.269m')">Front</button>
+	<button onClick="setOrbit('-61.8deg 53.56deg 5.269m')">Top</button>
+	<button onClick="setOrbit('-53.3deg 105.3deg 5.269m')">Bottom</button>
+
+
+
+    </model-viewer>  
+
+<script>
+function setOrbit(orbit)
+{document.getElementById('gear').cameraOrbit = orbit;}
+function setTarget(target)
+{document.getElementById('gear').cameraTarget = target;}
+</script>
+
+
+<script>
+  function addhotspot1(){
+  document.getElementById("hotspot1").style.visibility="visible"
+  }
+  function removehotspot1(){
+  document.getElementById("hotspot1").style.visibility="hidden";
+  }
+
+  function addhotspot2(){
+  document.getElementById("hotspot2").style.visibility="visible"
+  }
+  function removehotspot2(){
+  document.getElementById("hotspot2").style.visibility="hidden";
+  }
+
+ function addhotspot3(){
+  document.getElementById("hotspot3").style.visibility="visible"
+  }
+  function removehotspot3(){
+  document.getElementById("hotspot3").style.visibility="hidden";
+  }
+</script>
+
+
+
+
+<script>
+  functionsetOrbit(orbit)
+  {document.getElementById('gear').cameraOrbit = orbit;}
+  </script>
+
+
+
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> 
+for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </body>
+</html>

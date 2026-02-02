@@ -1,0 +1,18 @@
+<model-viewer src="loove.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="-20.66deg 77.12deg 5.269m" field-of-view="30deg" auto-rotate>
+    <button class="Hotspot" slot="hotspot-1" data-position="0.4590704510482886m 0.07982015181931001m 0.8985478700031575m" data-normal="0.10286304012064698m 0.9226588254900003m 0.3716448394940412m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Flush</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.5513950937839533m 0.07969902302965115m 0.01882188429399176m" data-normal="-0.025049798963174084m -0.9996767548105469m -0.004346661173666007m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Material Tray</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-0.035051162684758844m 0.9971569031659682m -0.019520441699639693m" data-normal="-0.42586703681983396m -0.08920712280041995m 0.9003773410031848m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Main Body</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
